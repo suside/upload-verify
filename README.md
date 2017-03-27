@@ -3,6 +3,8 @@ upload-verify
 
 Simple [ETAG](https://en.wikipedia.org/wiki/HTTP_ETag) based tool to verify that files in your local directory are exactly the same your webserver is serving.
 
+[![Build Status](https://travis-ci.org/suside/upload-verify.svg?branch=master)](https://travis-ci.org/suside/upload-verify)
+
 Usage
 ----------
 Positive case:
@@ -18,4 +20,14 @@ Negative case (when you have diffrent local file):
 $ date > ./test/test.txt # modify it
 $ upload-verify --verbose --local=./test --url=http://127.0.0.1/
 2017/03/10 11:52:30 FATAL! ./test/test.txt remote:"58d3719b-7" local:"58b6854a-6c"
+```
+
+Install
+----------
+Download binary release
+https://github.com/suside/upload-verify/releases/latest
+
+or install with `go` from master branch
+```
+go get github.com/suside/upload-verify
 ```

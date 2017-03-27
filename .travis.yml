@@ -1,0 +1,12 @@
+language: go
+sudo: required
+services:
+- docker
+deploy:
+  provider: releases
+  api_key:
+    secure: N9zQeDlMc018MfO7GZUb6v/LUm1fSUXJVrYvpsbmMdyVUdoZDgYjBRXSMoRZWlPuiyE73Pueyiw/5yJVUJRXNbEkV171bPSP/wRpS5eUOpr8ffjCCgwg71rj/mkHbBhVHsICFIuE4cUUjdho1D66MRpe6AkETg9X+ZCiTlnAtHkRaOO2iZfFqUcdyXrOEfinsh4/mRM5No6Ry+A7c/xl/YdOW0MGPkatoX2Yi098+maRwhEy/cnArh1FEF1cqs6TUjbv25QEr2WcfnWKDPTzubvUSY6SXbwdqFF15MVC7/O1H8Vd/e33nZAth9Fd7Qj0ST5gF02oHy8ZjxGhem1Kv2UV5yiXvwPuYTxXLYlD234pOP5UW2/XP6+Kuf6Ua2dk8sqbPuOpV0IAbMyA84gNLn5Ey/ZqTVdFEdPjS08UoZ101N7VNJBspLjQoS8Mao5rUJrsbnClQyxA52Yd81JxLbMaDV6N7g6umLTo2xNeKJ9X2sbZ9SZK9yjFRcLX+WMW/YmaJ/pzqVFDW7XYGj7FFgdghBJ2Q3YYQg6Fb5crvIcnwtQ1uiiu/x1YY5iRu+i+3UhUMove0rz+fXzvNTAsBlqFRBQH2qOH+SNf/w9Efr3Sxe/1L4vC/CjBzzDfFSuX9WnoSnUYSyVe6el+Rh1y9mYTpbO/na9jFeoFG4C6TWw=
+  file: upload-verify
+  skip_cleanup: true
+  on:
+    tags: true
